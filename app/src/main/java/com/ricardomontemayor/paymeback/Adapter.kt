@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ricardomontemayor.paymeback.databinding.ItemLoanBinding
+import java.text.SimpleDateFormat
 
 class Adapter(var loans: List<Loan>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
@@ -25,7 +26,7 @@ class Adapter(var loans: List<Loan>) : RecyclerView.Adapter<Adapter.ViewHolder>(
             textViewName.text = loan.name
             textViewConcept.text = loan.concept
             textViewAmount.text = String.format("$" + loan.amount)
-            textViewDate.text = loan.date.toString()
+            textViewDate.text = SimpleDateFormat("dd/MM/yyyy").format(loan.date)
         }
     }
 
