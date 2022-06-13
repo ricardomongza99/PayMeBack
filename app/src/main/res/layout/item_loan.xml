@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ricardo"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -35,7 +35,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="60dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_weight = "0"
             android:orientation="vertical">
@@ -46,14 +46,15 @@
                 android:layout_height="wrap_content"
                 android:text="$100"
                 android:textAlignment="textEnd"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="02/03/22" />
+                android:text="02/03/22"
+                android:textAlignment="textEnd" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
