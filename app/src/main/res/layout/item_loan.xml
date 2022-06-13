@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight = "1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ricardo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_concept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payed for his dinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight = "0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$100"
+                android:textAlignment="textEnd"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="02/03/22" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>
