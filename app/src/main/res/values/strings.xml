@@ -14,4 +14,5 @@
     <string name="date">Date</string>
     <string name="amount">Amount</string>
     <string name="concept">Concept</string>
+    <string name="add_loan">Add loan</string>
 </resources>

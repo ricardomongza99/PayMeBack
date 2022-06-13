@@ -5,68 +5,68 @@
     android:layout_height="match_parent"
     tools:context=".AddLoanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
-
-        <EditText
-            android:id="@+id/name_textfield"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/name"
-            android:inputType="textPersonName"
-            android:minHeight="48dp" />
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
 
             <EditText
-                android:id="@+id/amount_textfield"
-                android:layout_width="wrap_content"
+                android:id="@+id/textField_name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/textField_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="@string/amount"
                 android:inputType="numberDecimal"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:importantForAutofill="no" />
 
             <EditText
-                android:id="@+id/date_textfield"
-                android:layout_width="wrap_content"
+                android:id="@+id/textField_concept"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:ems="10"
-                android:hint="@string/date"
-                android:inputType="date"
-                android:minHeight="48dp" />
+                android:hint="@string/concept"
+                android:inputType="textShortMessage"
+                android:minHeight="48dp"
+                android:importantForAutofill="no" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"/>
+
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/add_loan" />
         </LinearLayout>
+    </ScrollView>
 
-        <EditText
-            android:id="@+id/concept_textfield"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/concept"
-            android:inputType="textShortMessage"
-            android:minHeight="48dp" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Loan"
-            android:layout_marginTop="20dp"
-            />
-
-    </LinearLayout>
 
 </FrameLayout>
