@@ -24,6 +24,13 @@ class LoanViewModel: ViewModel() {
         return loans.count();
     }
 
+    init {
+        // Add test data
+        addLoan("Ricardo", 200.0, Date(), "He owes me")
+        addLoan("Luis", 800.0, Date(), "I payed for his concert ticket")
+        addLoan("Andres", 2000.0, Date(), "Went for dinner")
+    }
+
     fun addLoan(name: String, amount: Double, date: Date, concept: String) {
         val newLoan = Loan(name, amount, date, concept)
         _loans.add(newLoan)
