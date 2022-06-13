@@ -17,14 +17,14 @@
         >
 
         <TextView
-            android:id="@+id/owe_textview"
+            android:id="@+id/textView_total_amount_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/total_loan_amount_title"
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/total_textview"
+            android:id="@+id/textView_total_amount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="$200"
@@ -33,7 +33,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView_total_count_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/total_loan_count_title"
@@ -42,7 +42,7 @@
             />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textView_total_count"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="3"
