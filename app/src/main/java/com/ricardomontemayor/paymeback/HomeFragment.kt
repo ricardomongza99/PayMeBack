@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.ricardomontemayor.paymeback.databinding.FragmentHomeBinding
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -25,8 +26,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Add test data
+        viewModel.addLoan("Ricardo", 200.0, Date(), "He owes me")
+        viewModel.addLoan("Luis", 800.0, Date(), "I payed for his concert ticket")
+        viewModel.addLoan("Andres", 2000.0, Date(), "Went for dinner")
 
-
+        // Set total loan amount and count text
+        binding.textViewTotalAmount.text = String.format("$" + viewModel.totalAmount)
+        binding.textViewTotalCount.text = viewModel.totalCount.toString()
     }
 
     override fun onDestroyView() {
