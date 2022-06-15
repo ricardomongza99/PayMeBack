@@ -8,9 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ricardomontemayor.paymeback.databinding.FragmentLoansListBinding
+import kotlin.random.Random
 
 class LoansListFragment : Fragment() {
 
+    lateinit var data: MutableList<Loan>
     private val viewModel : LoanViewModel by activityViewModels()
     private var _binding: FragmentLoansListBinding? = null
     private val binding get () = _binding!!
@@ -27,11 +29,16 @@ class LoansListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = Adapter(viewModel.loans)
+        val adapter = Adapter(viewModel.loans){index -> deleteItem(index)}
         binding.rvLoans.adapter = adapter
         binding.rvLoans.layoutManager = LinearLayoutManager(activity)
+
     }
 
+    fun deleteItem(index: Int){
+        data.removeAt(index)
+
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/Documents/GitHub/PayMeBack/app/src/main/res/layout/fragment_home.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/user/Documents/GitHub/PayMeBack/app/src/main/res/layout/fragment_loans_list.xml" value="0.25" />
+        <entry key="..\:/Users/user/Documents/GitHub/PayMeBack/app/src/main/res/layout/item_loan.xml" value="0.28940217391304346" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37222222222222223" />
         <entry key="app/src/main/res/layout/fragment_add_loan.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />

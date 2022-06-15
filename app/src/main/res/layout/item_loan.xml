@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:text="02/03/22"
                 android:textAlignment="textEnd" />
+
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

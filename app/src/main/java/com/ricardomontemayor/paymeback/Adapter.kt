@@ -2,14 +2,20 @@ package com.ricardomontemayor.paymeback
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.View
+import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 import com.ricardomontemayor.paymeback.databinding.ItemLoanBinding
 import java.text.SimpleDateFormat
 
-class Adapter(var loans: List<Loan>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(var loans: List<Loan>, val onClickDelete: (Int) -> Unit) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
-    class ViewHolder(val binding: ItemLoanBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: ItemLoanBinding) : RecyclerView.ViewHolder(binding.root) {
 
+        fun bind(view: View){
+            val button = view.findViewById<Button>(R.id.btnDelete)
+            button.setOnClickListener{onClickDelete(position)}
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -20,7 +26,6 @@ class Adapter(var loans: List<Loan>) : RecyclerView.Adapter<Adapter.ViewHolder>(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val loan = loans[position]
-
         // For each card, set corresponding loan data
         holder.binding.apply {
             textViewName.text = loan.name
@@ -28,9 +33,11 @@ class Adapter(var loans: List<Loan>) : RecyclerView.Adapter<Adapter.ViewHolder>(
             textViewAmount.text = String.format("$" + loan.amount)
             textViewDate.text = SimpleDateFormat("dd/MM/yyyy").format(loan.date)
         }
+
     }
 
     override fun getItemCount(): Int {
         return loans.size
     }
+
 }

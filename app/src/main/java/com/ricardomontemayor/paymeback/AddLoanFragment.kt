@@ -42,6 +42,8 @@ class AddLoanFragment : Fragment() {
 
     // Actions
 
+
+
     private fun addLoanButtonPressed() {
         // Get fields values
         val name = binding.textFieldName.text.toString()
