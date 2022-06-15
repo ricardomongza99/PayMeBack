@@ -35,4 +35,8 @@ class LoanViewModel: ViewModel() {
         val newLoan = Loan(name, amount, date, concept)
         _loans.add(newLoan)
     }
+
+    fun deleteLoan(loan : Loan) {
+        _loans.remove(loan)
+    }
 }

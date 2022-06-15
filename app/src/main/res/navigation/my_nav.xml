@@ -20,4 +20,9 @@
         android:name="com.ricardomontemayor.paymeback.LoansListFragment"
         android:label="fragment_loans_list"
         tools:layout="@layout/fragment_loans_list" />
+    <fragment
+        android:id="@+id/deleteLoanFragment"
+        android:name="com.ricardomontemayor.paymeback.DeleteLoanFragment"
+        android:label="fragment_delete_loan"
+        tools:layout="@layout/fragment_delete_loan" />
 </navigation>

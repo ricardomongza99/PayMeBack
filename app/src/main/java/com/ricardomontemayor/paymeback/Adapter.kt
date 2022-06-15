@@ -1,15 +1,30 @@
 package com.ricardomontemayor.paymeback
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ricardomontemayor.paymeback.databinding.ItemLoanBinding
 import java.text.SimpleDateFormat
 
-class Adapter(var loans: List<Loan>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
+class Adapter(var loans: List<Loan>, val listener: OnItemClickListener) : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
-    class ViewHolder(val binding: ItemLoanBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class ViewHolder(val binding: ItemLoanBinding) : RecyclerView.ViewHolder(binding.root),
+        View.OnClickListener {
+        init {
+            binding.root.setOnClickListener(this)
+        }
 
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
